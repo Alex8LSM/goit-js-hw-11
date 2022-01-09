@@ -11,6 +11,19 @@ body {
   color: #212121;
   line-height: 1.5;
   margin: 0px;
+  position: absolute;
+  min-width: 1150px;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 .search-form {
@@ -19,7 +32,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 55px;
-  padding: 10px;
+  width: 100%;
+  position: fixed;
 }
 
 .text-input {
@@ -43,47 +57,54 @@ outline: none;
   height: 35px;
 }
 
+.load-more {
+  background-color: cornflowerblue;
+  margin-left: 45vw;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
 .gallery {
+  margin-top: 55px;
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
-  outline: solid 1px blue;
-  /* width: 100vw; */
 }
 
 .gallery-item {
   text-decoration: none;
-  /* height: calc(2 / 3 vw); */
-  
 }
 
 .gallery-image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 200px;
 }
 
 .photo-card{
-  /* display: block; */
+  margin-top: 20px;
+
   margin-left: 20px;
   width: calc((100% - 100px) / 4);
-  height: auto;
-  outline: solid 1px cyan;
+   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .info {
   display: flex;
   align-items: center;
   justify-content: center;
-  outline: solid 2px red;
   color: black;
-  /* height: 18%; */
-  /* width: 100%; */
-  
+ 
 }
 
 .info-item {
-    /* width: 100%; */
-  outline: solid 1px black;
-  /* padding: 10px; */
   text-align: center;
+  padding: 5px 10px;
+  margin: 0;
 }
