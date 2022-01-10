@@ -16,6 +16,7 @@ const axios = require('axios');
 let searchData = '';
 let hitsCount = 0;
 let maxHits = 0;
+const lightbox = new SimpleLightbox('.gallery a', {});
 const searchURL = `https://pixabay.com/api/`;
 const searchParams = {
   params: {
@@ -76,8 +77,9 @@ async function fetchImages(url, param) {
       
       const markup = imageCard(fetchGallery.hits);
       myGallery.insertAdjacentHTML('beforeend', markup);
+      lightbox.refresh();
 
-      const lightbox = new SimpleLightbox('.gallery a', {});
+      
     }
   } catch (error) {
     Notiflix.Notify.failure(`Oops, there is an error: ${error.message}`);
